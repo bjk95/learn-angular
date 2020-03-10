@@ -1,6 +1,20 @@
+  <h4>Servers component</h4>
+
 <p>
-  servers works!
+  <b>In this component we're playing with text injection and changeable buttons</b>
 </p>
-<app-server></app-server>
-<app-server></app-server>
-<h5>Yeah I'm hot</h5>
+
+<p>Id: {{ ID }}</p>
+<p>Server Name: {{  serverName  }}</p>
+<p>Server Status: {{ getServerStatus() }}</p>
+
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewVM"
+  (click)="onCreateServer()">New VM
+</button>
+
+<p>{{  serverCreationStatus }}</p>
+
+
+<button class="btn btn-primary" [disabled]="!allowNewDatabase">New Database</button>

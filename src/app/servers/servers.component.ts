@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  constructor() { }
+  ID: Number = 666;
+  serverName: String = 'The big one';
+  serverStatus: String = 'active';
 
-  ngOnInit() {
+  allowNewVM: Boolean = true;
+  allowNewDatabase: Boolean = false;
+
+  serverCreationStatus: String = "Starting";
+
+  getServerStatus() {
+    return this.serverStatus;
+  }
+
+  constructor() {}
+
+  ngOnInit() { }
+
+  onCreateServer() {
+    this.serverCreationStatus = 'Ready';
   }
 
 }
