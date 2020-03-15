@@ -7,9 +7,11 @@ import { FormsModule } from '@angular/forms';
 import { ServersComponent } from './servers/servers.component';
 import { ChartsComponent } from './charts/charts.component';
 import { IndexComponent } from './index/index.component';
-import { MatMenuModule } from '@angular/material/menu';
+// import *   from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 
 @NgModule({
@@ -24,12 +26,14 @@ import {MatButtonModule} from '@angular/material/button';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatToolbarModule,
+    MatSliderModule // ,
+    // MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   exports: [
-    MatMenuModule
+
   ]
 })
 export class AppModule { }

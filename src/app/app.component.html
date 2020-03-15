@@ -3,6 +3,7 @@
 <div style="text-align:center">
   <h5>
     The time is {{ time }}
+    <mat-slider min="1" max="100" step="1" value="1"></mat-slider>
   </h5>
   <input type="text" [(ngModel)]="text">
   <p class="display-4">{{text}}</p>
