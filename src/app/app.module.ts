@@ -7,10 +7,20 @@ import { FormsModule } from '@angular/forms';
 import { ServersComponent } from './servers/servers.component';
 import { ChartsComponent } from './charts/charts.component';
 import { IndexComponent } from './index/index.component';
+import { HomeComponent } from './home/home.component';
+import { TabsComponent } from './tabs/tabs.component';
 // import *   from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs';
+
 
 
 
@@ -19,7 +29,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     AppComponent,
     ServersComponent,
     ChartsComponent,
-    IndexComponent
+    IndexComponent,
+    HomeComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +39,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatSliderModule // ,
+    MatSliderModule,
+    MatCardModule,
+    MatRadioModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatButtonModule,
+    MatTabsModule
+     // ,
     // MatButtonModule
   ],
   providers: [],

@@ -139,5 +139,8 @@
       }
     }
   },
-  "defaultProject": "learnAngular"
+  "defaultProject": "learnAngular",
+  "cli": {
+    "analytics": false
+  }
 }

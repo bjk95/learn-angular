@@ -13,58 +13,13 @@ export class ChartsComponent implements OnInit {
   @ViewChild('chart')
   private chartContainer: ElementRef;
 
-  // dataset = [
-  //   {x: 10,    y: 10},
-  //   {x: 10,    y: 20},
-  //   {x: 10,    y: 30}
-  // ];
-
   margin = {top: 20, right: 20, bottom: 30, left: 40};
 
   constructor() { }
 
   ngOnInit(): void {
-    // if (!this.data) { return; }
-
     this.createChart();
   }
-
-  // private createChart(): void {
-  //   const dataset = [63, 38, 92, 282, 23];
-  //   const svgWidth = 500, svgHeight = 300, barPadding = 5;
-  //   let barWidth = (svgWidth / dataset.length);
-
-  //   // d3.select('svg').remove();
-  //   d3.select('h3').text('fuq u');
-
-  //   // const element = this.chartContainer.nativeElement;
-  //   // const data = this.dataset;
-
-
-  //   var svg = d3.select('svg').append('svg')
-  //     .attr('width', svgWidth)
-  //     .attr('height', svgHeight);
-
-  //   var barChart = svg.selectAll('rect')
-  //     .data(dataset)
-  //     .enter()
-  //     .append('rect')
-  //     .attr('y', function(d) {
-  //       return svgHeight - d;
-  //     })
-  //     .attr('height', function(d) {
-  //       return d;
-  //     })
-  //     .attr('width', svgWidth)
-  //     .attr('transform', function(d, i){
-  //       var translate = [barWidth = i, 0];
-  //       return 'translate('+ translate +')';
-  //     });
-
-  //   // const contentWidth = element.offsetWidth = this.margin.left - this.margin.right;
-  //   // const contentHeight = element.offsetHeight - this.margin.top - this.margin.bottom;
-
-  //   // const x = d3.
 
   private createChart(): void {
 
@@ -84,6 +39,57 @@ export class ChartsComponent implements OnInit {
     d3.selectAll('.d3Fun:nth-child(even)')
       .style('color', 'red')
       .text('u a beech');
+
+    // d3.select('body')
+    //     .append('svg')
+    //       .attr('width', 400)
+    //       .attr('height', 400)
+    //       .style('background', 'blue')
+    //     .append('rect')
+    //       .attr('width', 300)
+    //       .attr('height', 300)
+    //       .attr('x', 50)
+    //       .attr('y', 50)
+    //       .style('fill', 'green');
+
+    const myData = [10, 240, 350, 340, 203];
+
+    const height = 500;
+    const width = 500;
+    const barWidth = 35;
+    const barOffset = 5;
+
+    const yScale = d3.scaleLinear()
+      .domain([0, d3.max(myData)])
+      .range([0, 500]);
+
+    const xScale = d3.scaleOrdinal()
+        .domain([<any >d3.range(0, myData.length)])
+        .range([0, width]);
+
+    d3.select('#chart')
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height)
+        .style('background', '#f4f4f4')
+        .selectAll('rect')
+          .data(myData)
+          .enter()
+            .append('rect')
+            .style('fill', 'blue')
+            .attr('width', barWidth)
+            .attr('height', (d) => d)
+            .attr('x', (d, i) => i * (barWidth + barOffset))
+            .attr('y', (d) => height - d);
+
+    // d3.csv('C:/Users/BradleyKester/dev/learnAngular/src/app/charts/populations.csv').then( data => {
+    //   console.log(data)
+    // });
+
+    // d3.csv("https://gist.githubusercontent.com/GerardoFurtado/2e9f269f7a0f56cf7e23b480afcf280a/raw/5e361753a695534915e81786013976aa94685695/csvfile.csv", function(error, data) {
+    //   console.log(data)
+    // });
+
 
   }
 
