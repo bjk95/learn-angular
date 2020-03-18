@@ -17,11 +17,9 @@ jobs:
       with:
         node-version: 10.13
     - name: Install dependencies
-      run: npm install
+      run: npm ci
     - name: Lint
       run: npm run lint
     - name: Build
-      run: |
-          npm ci
-          npm run build-and-deploy
+      run: npm run build-and-deploy
           
