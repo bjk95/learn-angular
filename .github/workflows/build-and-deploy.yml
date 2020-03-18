@@ -17,6 +17,8 @@ jobs:
       with:
         node-version: 10.13
     - name: Install dependencies
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: npm ci
     - name: Lint
       run: npm run lint
