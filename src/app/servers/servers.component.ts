@@ -14,7 +14,7 @@ export class ServersComponent implements OnInit {
   allowNewVM: Boolean = true;
   allowNewDatabase: Boolean = false;
 
-  serverCreationStatus: String = "Starting";
+  serverCreationStatus: String = 'Starting';
 
   getServerStatus() {
     return this.serverStatus;

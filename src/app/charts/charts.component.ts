@@ -82,15 +82,6 @@ export class ChartsComponent implements OnInit {
             .attr('x', (d, i) => i * (barWidth + barOffset))
             .attr('y', (d) => height - d);
 
-    // d3.csv('C:/Users/BradleyKester/dev/learnAngular/src/app/charts/populations.csv').then( data => {
-    //   console.log(data)
-    // });
-
-    // d3.csv("https://gist.githubusercontent.com/GerardoFurtado/2e9f269f7a0f56cf7e23b480afcf280a/raw/5e361753a695534915e81786013976aa94685695/csvfile.csv", function(error, data) {
-    //   console.log(data)
-    // });
-
-
   }
 
 }
