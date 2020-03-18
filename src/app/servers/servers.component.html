@@ -14,15 +14,28 @@
 
 <p>Id: {{ ID }}</p>
 <p>Server Name: {{  serverName  }}</p>
-<p>Server Status: {{ getServerStatus() }}</p>
+<p [ngStyle]="{backgroundColor: getColor()}">
+  Server Status: {{ serverStatus }}
+</p>
+
+<label>Server name</label>
+<input
+  type="text"
+  class="form-control"
+  placeholder="Something"
+  [(ngModel)]="newServerName">
 
 <button
   class="btn btn-primary"
   [disabled]="!allowNewVM"
-  (click)="onCreateServer()">New VM
+  (click)="onCreateServer()">
+  New VM
 </button>
 
-<p>{{  serverCreationStatus }}</p>
-
+<p *ngIf="serverCreated else noServer">{{  newServerName }}</p>
+<ng-template #noServer>
+  <p>Ready to create server</p>
+</ng-template>
 
 <button class="btn btn-primary" [disabled]="!allowNewDatabase">New Database</button>
+
