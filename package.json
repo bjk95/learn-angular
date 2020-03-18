@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:gp": "ng build --prod --base-href \"learn-angular\"",
-    "build-and-deploy": "ng build --prod --base-href \"learn-angular\" && ngh"
+    "build-and-deploy": "ng build --prod --base-href \"learn-angular\" && ngh --no-silent"
   },
   "private": true,
   "enableIvy": false,
