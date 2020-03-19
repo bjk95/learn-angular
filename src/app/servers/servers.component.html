@@ -14,7 +14,8 @@
 
 <p>Id: {{ ID }}</p>
 <p>Server Name: {{  serverName  }}</p>
-<p [ngStyle]="{backgroundColor: getColor()}">
+<p [ngStyle]="{backgroundColor: getColor()}"
+  [ngClass]="{online: serverStatus === 'online'}">
   Server Status: {{ serverStatus }}
 </p>
 
@@ -39,3 +40,11 @@
 
 <button class="btn btn-primary" [disabled]="!allowNewDatabase">New Database</button>
 
+<ul >
+  <li *ngFor="let serv of servers; let i = index ">Server {{ i + 1 }}: {{ serv  }}</li>
+</ul>
+
+<mat-card *ngFor="let serv of servers; let i = index" class="server-list">
+  <h3>Server {{ i }}</h3>
+  <p>Server name: {{ serv }}</p>
+</mat-card>

@@ -18,19 +18,28 @@
           </mat-toolbar-row>
         </header> -->
         <mat-toolbar color="primary">
+
           <mat-toolbar-row>
             <button mat-icon-button>
               <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
             </button>
             <h1>Learning Angular</h1>
-            <span class="menu-spacer"></span>
+            <!-- <span class="menu-spacer"></span> -->
             <div>
               <a mat-button [routerLink]="''"> Home </a>
               <a mat-button [routerLink]="'/charts'"> Charts </a>
               <a mat-button [routerLink]="'/servers'"> Servers </a>
+            </div>
+
+              <span class="example-spacer"></span>
+
+            <div>
+              <mat-icon [routerLink]="'/sign-up'" class="example-icon">person</mat-icon>
 
             </div>
+
           </mat-toolbar-row>
+
           </mat-toolbar>
 
           <mat-sidenav-container>
@@ -41,6 +50,7 @@
                 <a mat-list-item [routerLink]="'/charts'"> Charts </a>
                 <a mat-list-item [routerLink]="'/servers'"> Servers </a>
                 <a mat-list-item [routerLink]="'/tabs'"> Tabs </a>
+
 
               </mat-nav-list>
             </mat-sidenav>

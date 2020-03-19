@@ -28,7 +28,9 @@ header{
 
 }
 
-
+.example-spacer{
+  flex: 1 1 auto;
+}
 
 ul{
     padding:0;
