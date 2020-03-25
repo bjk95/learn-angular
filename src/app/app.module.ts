@@ -12,6 +12,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatStepperModule, MatStep } from '@angular/material/stepper';
+import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { HttpClientModule } from '@angular/common/http';
+import { DemoMaterialModule } from './materialModule';
+import { MatNativeDateModule } from '@angular/material/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 
 
@@ -23,11 +28,7 @@ import { IndexComponent } from './index/index.component';
 import { HomeComponent } from './home/home.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import { HttpClientModule } from '@angular/common/http';
-import { DemoMaterialModule } from './materialModule';
-import { MatNativeDateModule } from '@angular/material/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
 
 
 

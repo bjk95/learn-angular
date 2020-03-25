@@ -15,7 +15,7 @@ export class ServersComponent implements OnInit {
   serverStatus: String = 'offlne';
   newServerName: String = 'Enter name';
   serverCreated: Boolean = false;
-  servers: String[] = ['Test server 1', 'Test server 2']
+  servers: String[] = ['Test server 1', 'Test server 2'];
 
   allowNewVM: Boolean = true;
   allowNewDatabase: Boolean = false;
